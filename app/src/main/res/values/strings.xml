@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Learn-Navigation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigate_to_profile_button">Navigate To Profile</string>
+    <string name="navigate_to_settings_fragment">Navigate To Settings Fragment</string>
+    <string name="navigate_to_home_fragment">Navigate to Home Fragment</string>
+</resources>
