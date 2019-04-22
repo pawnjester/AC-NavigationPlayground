@@ -31,9 +31,13 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val passedString = arguments?.getString("passed_string")
-        Log.e("hereisthestring",passedString?: "nope")
+//        val passedString = arguments?.getString("passed_string")
+//        Log.e("hereisthestring",passedString?: "nope")
 
-        binding.profileName.text = passedString
+        arguments?.let {
+            val safeArgs = ProfileFragmentArgs.fromBundle(it)
+            binding.profileName.text = "${safeArgs.profileName}"
+        }
+
     }
 }

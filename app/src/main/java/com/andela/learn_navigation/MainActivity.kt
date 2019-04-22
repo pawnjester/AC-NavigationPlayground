@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        navHostFragment = supportFragmentManager
-                .findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
+//        navHostFragment = supportFragmentManager
+//                .findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment
+//        navController = navHostFragment.navController
     }
 }

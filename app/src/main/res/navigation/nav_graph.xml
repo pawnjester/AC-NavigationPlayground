@@ -31,5 +31,8 @@
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" /><deepLink app:uri="https://navigation.tutorial/{passed_string}"/>
+        <argument
+            android:name="profileName"
+            android:defaultValue='""' />
     </fragment>
 </navigation>

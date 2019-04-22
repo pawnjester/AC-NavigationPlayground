@@ -29,12 +29,16 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         home_button.setOnClickListener {
-            val args = Bundle()
-            args.putString("passed_string", binding.name.text.toString())
-            navController = Navigation.findNavController(
-                    activity!!, R.id.my_nav_host_fragment )
-            navController.navigate(R.id.action_homeFragment_to_profileFragment, args)
+//            val args = Bundle()
+//            args.putString("passed_string", binding.name.text.toString())
+//            navController = Navigation.findNavController(
+//                    activity!!, R.id.my_nav_host_fragment )
+//            navController.navigate(R.id.action_homeFragment_to_profileFragment, args)
+            val nextAction = HomeFragmentDirections.actionHomeFragmentToProfileFragment()
+            nextAction.setProfileName(binding.name.text.toString())
+            Navigation.findNavController(it).navigate(nextAction)
         }
         super.onViewCreated(view, savedInstanceState)
     }
