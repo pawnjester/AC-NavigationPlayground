@@ -9,7 +9,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.andela.learn_navigation.databinding.FragmentProfileBinding
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 
 class ProfileFragment : Fragment() {
@@ -39,5 +41,14 @@ class ProfileFragment : Fragment() {
             binding.profileName.text = "${safeArgs.profileName}"
         }
 
+        profile_button.setOnClickListener {
+            moveToSettings(it)
+        }
+
+    }
+
+    private fun moveToSettings(view: View) {
+        val nextAction = ProfileFragmentDirections.actionProfileFragmentToSettingsFragment()
+        Navigation.findNavController(view).navigate(nextAction)
     }
 }
