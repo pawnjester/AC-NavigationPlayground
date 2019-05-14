@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.andela.learn_navigation.R.id.home_button
 import com.andela.learn_navigation.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
